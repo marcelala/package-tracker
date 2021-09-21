@@ -1,40 +1,46 @@
+*
+  box-sizing: border-box
+
 body
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: $font-main;
-	color: $secondary;
-	height: 100vh;
-  	-webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0
+  margin: 0
+  font-family: $font
+  color: $secondary
+  height: 100vh
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
 
-html {
-	scroll-behavior: smooth;
-	align-items: center;
-	width: 100vw;
-	height: 100vh;
-}
+.App
+  scroll-behavior: smooth
+  align-items: center
+  width: 100vw
+  height: 100vh
 
-section {
-	width: 100%;
-	padding: 0;
-	margin: 0;
-}
+section
+  width: 100%
+  padding: 0
+  margin: 0
 
 article,
 nav,
-section {
-	display: block;
-}
+section
+  display: block
+
 ol,
-ul {
-	list-style: none;
-}
-a {
-	text-decoration: none;
-	color: inherit;
-}
-img {
-	max-width: 100%;
-	height: auto;
-}
+ul
+  list-style: none
+
+a
+  text-decoration: none
+  color: inherit
+
+img
+  max-width: 100%
+  height: auto
+
+.proportional-scale
+  height: 0
+  padding-bottom: 56.25%
+  /* (height/width) * 100  = 16:9*/
+  position: relative
+  overflow: hidden
