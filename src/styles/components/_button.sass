@@ -1,27 +1,31 @@
 //noinspection SassScssResolvedByNameOnly
 .btn
-	font-size: 1rem
-	position: relative
-	text-decoration: none
-	border: 0
-	font-weight: 400
-	justify-content: center
-	align-items: center
-	color: white
-	text-transform: capitalize
-	margin: $space-small
-	@include hover-lift
-	border-radius: 2rem
-	&-primary
-		background-color: $primary
-		color: $white
-		padding: $space-small
+  font-size: 1rem
+  font-family: $font
+  text-decoration: none
+  border: 0
+  font-weight: 400
+  text-align: center
+  color: white
+  text-transform: capitalize
+  padding: $space-small
+  @include hover-lift
+  border-radius: 2rem
 
-	&-secondary
-		background-color: $white
-		color: $primary
-		border: 0.5px solid $primary
-		padding: $space-x-small
-		font-size: 0.8rem
+  &-primary
+    background-color: $primary
+    color: $white
 
 
+  &-secondary
+    background-color: $white
+    color: $primary
+    border: 0.5px solid $primary
+    padding: $space-x-small
+    font-size: 0.8rem
+
+  &-language
+    background-color: transparent
+    font-size: 0.8rem
+    border: 0.5px solid $white
+    padding: 0.25rem $space-x-small
