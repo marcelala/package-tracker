@@ -1,0 +1,36 @@
+{
+  "list": {
+    "title": "Hello",
+    "description": "Your packages",
+    "item": {
+      "parcel_id": "Package ID",
+      "status": {
+        "order-info-received": "Received by courier",
+        "on-the-way": "On the way",
+        "delivered": "Delivered",
+        "ready-for-pickup": "Ready for pick up"
+      },
+      "view-detail": "View detail"
+    }
+  },
+  "details": {
+    "title": "Order from",
+    "labels": {
+      "location": "Pick up location",
+      "eta": "Estimated delivery",
+      "last_update": "Last updated",
+      "note": "Notes",
+      "verification": "ID verification"
+    },
+    "descriptions": {
+      "eta": "Information unavailable",
+      "verification": "Required"
+    },
+    "button-label": "Go back"
+  },
+  "common": {
+    "loading": "Getting your packages",
+    "no_internet_1": "Oops, we could not get information on your packages.",
+    "no_internet_2": "Please check your internet connection."
+  }
+}

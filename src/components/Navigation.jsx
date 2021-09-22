@@ -5,18 +5,18 @@ import logo from "../assets/images/logo.png";
 import Button from "./Button";
 
 export default function Navigation() {
-  const [t, i18n] = useTranslation("common");
+  const { i18n } = useTranslation("common");
   // Local state
-  const [language, setLanguage] = useState("English");
+  const [language, setLanguage] = useState("Svenska");
 
   // Methods
   function updateLanguage() {
-    if (language === "English") {
+    if (language === "Svenska") {
       i18n.changeLanguage("se");
-      setLanguage("Svenska");
+      setLanguage("English");
     } else {
       i18n.changeLanguage("en");
-      setLanguage("English");
+      setLanguage("Svenska");
     }
   }
 

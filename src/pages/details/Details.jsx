@@ -11,7 +11,7 @@ export default function Details({ data }) {
 
   return (
     <section id="details">
-      <PackageCard parcel={item} />
+      <PackageCard item={item} />
       <PackageDetails parcel={item} />
       tea
       <Button onClick={() => history.goBack()} theme={"ghost"}>

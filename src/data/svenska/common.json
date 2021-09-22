@@ -1,0 +1,36 @@
+{
+  "list": {
+    "title": "Hej",
+    "description": "Dina paket",
+    "item": {
+      "parcel_id": "Paket ID",
+      "status": {
+        "order-info-received": "Mottagen av kurir",
+        "on-the-way": "På väg",
+        "delivered": "Levererad",
+        "ready-for-pickup": "Redo för upphämtning"
+      },
+      "view-detail": "Visa detaljer"
+    }
+  },
+  "details": {
+    "title": "Beställning från",
+    "labels": {
+      "location": "Upphämtning stället",
+      "eta": "Beräknad leverans",
+      "last_update": "Sist updaterad",
+      "note": "Anteckningar",
+      "verification": "ID kontroll"
+    },
+    "descriptions": {
+      "eta": "Information inte tillgänglig",
+      "verification": "Nödvändig"
+    },
+    "button-label": "Tillbaka"
+  },
+  "common": {
+    "loading": "Läser in dina paket",
+    "no_internet_1": "Oj, Vi kunde inte ladda dina paket.",
+    "no_internet_2": "Kontrollera din internetanslutning och försök igen."
+  }
+}
