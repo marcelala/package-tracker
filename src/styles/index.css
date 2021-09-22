@@ -21,8 +21,7 @@ body {
 }
 
 section {
-  width: 100%;
-  height: auto;
+  width: 100vw;
   padding: 0;
   margin: 0;
 }
@@ -61,7 +60,7 @@ h2,
 h3,
 h4,
 p {
-  margin-top: 0;
+  margin: 0;
   color: #1C1C1C;
 }
 
@@ -86,22 +85,6 @@ h3 {
 p {
   font-size: 1rem;
   line-height: 1.375rem;
-}
-
-.App {
-  display: grid;
-  grid: auto-flow min-content/1fr;
-  grid-template-areas: "nav" "content" "footer";
-}
-
-nav {
-  width: 100%;
-  grid-area: nav;
-}
-
-footer {
-  width: 100%;
-  grid-area: footer;
 }
 
 .btn {
@@ -182,8 +165,8 @@ hr {
   border: none;
 }
 
-.footer {
-  background-color: #B2B5B5;
+footer {
+  background-color: #1C1C1C;
   height: 7rem;
   width: 100%;
   display: flex;
@@ -194,29 +177,66 @@ hr {
   justify-content: center;
   padding: 1.5rem;
 }
-.footer ul {
+footer ul {
   display: flex;
   justify-content: center;
 }
-.footer ul li {
+footer ul li {
   padding: 0.5rem;
 }
-.footer p {
-  color: #FFFFFF;
+footer p {
+  color: #FFEDAF;
   padding: 0.8rem;
 }
 
-#home {
-  padding: 0 2rem;
+.package-card {
+  width: 18rem;
+  height: 5.3rem;
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+  margin: auto;
+  display: inline-block;
+  padding: 0;
 }
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 3.5rem max-content 4rem;
+  align-items: center;
+  justify-content: space-around;
+}
+.card-content img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 1rem;
+}
+.card-content .text-box {
+  padding: 0.5rem;
+}
+.card-content .text-box h2 {
+  font-family: "Alegreya Sans SC", sans-serif;
+  weight: 700;
+}
+.card-content .text-box p {
+  color: #B2B5B5;
+}
+.card-content .text-box .status-icon {
+  width: 4rem;
+  height: 4rem;
+  font-family: #B2B5B5;
+  font-size: 0.6rem;
+}
+
 #home #hero {
-  height: 99vh;
+  height: 98vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-content: flex-end;
   text-align: center;
-  margin-top: 1rem;
+  padding: 0 2rem;
 }
 #home #hero h1 {
   margin: 0 auto;
@@ -232,6 +252,17 @@ hr {
 }
 #home #hero button {
   margin: 1rem auto;
+}
+#home #list {
+  background-color: #F3F3F3;
+  margin: 1.5rem auto;
+}
+#home #list ul {
+  margin: 1.5rem auto;
+  width: 100%;
+  display: grid;
+  row-gap: 1.5rem;
+  padding: 1.5rem 0;
 }
 
 .sidebar {

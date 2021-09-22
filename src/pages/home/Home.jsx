@@ -10,7 +10,9 @@ export default function Home({ data }) {
   return (
     <section id="home">
       <Hero onClick={() => setView(true)} />
-      {view && <ul>{Cards}</ul>}
+      <section id="list">
+        <ul>{Cards}</ul>
+      </section>
     </section>
   );
 }
