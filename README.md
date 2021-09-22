@@ -7,8 +7,9 @@
 
 ## Overview
 
-Welcome to Busy Bees 2.0, an assignment from Novare Potencial Academy. The goal of this project was to fetch data from a RESTful API and display the user's packages on a simple web application. Additionaly a map will display the pick-up location of each package (in progress).
-Click [here]() to visit.
+Welcome to Busy Bees 2.0, an assignment from Novare Potencial Academy. The goal of this project was to fetch data from a
+RESTful API and display the user's packages on a simple web application. Additionaly a map will display the pick-up
+location of each package (in progress). Click [here]() to visit.
 
 <br/>
 
@@ -30,7 +31,8 @@ Click [here]() to visit.
 
 <br/>
 
-The goal of this project was to build a multiple page application for a Vegan Restaurant as an assignment from Novare Potential Academy.
+The goal of this project was to build a multiple page application for a Vegan Restaurant as an assignment from Novare
+Potential Academy.
 <br/>
 
 ## Project Organisation
@@ -113,11 +115,14 @@ npm run build
 
 <br/>
 
-- As a project generated with `create-react-app`, it includes React and ReactDOM as dependencies. It also includes a set of scripts used by Create React App as a development dependency.
-- The project setup also uses [Webpack](https://webpack.js.org/) for handling all assets, as Webpack offers a custom way of “extending” the concept of `import` beyond JavaScript.
+- As a project generated with `create-react-app`, it includes React and ReactDOM as dependencies. It also includes a set
+  of scripts used by Create React App as a development dependency.
+- The project setup also uses [Webpack](https://webpack.js.org/) for handling all assets, as Webpack offers a custom way
+  of “extending” the concept of `import` beyond JavaScript.
 - [React Router Dom](https://www.npmjs.com/package/react-router-dom) for routing Navigation.
 - [SASS](https://github.com/sass/sass) Sassy CSS for styling
 - [Firebase](https://firebase.google.com/) for hosting the application.
+- [Mapbox](https://firebase.google.com/) for hosting the application.
 
 <br/>
 
@@ -127,7 +132,6 @@ npm run build
 
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
-- [SASS](https://github.com/sass/sass)
 
 <br/>
 
@@ -135,9 +139,13 @@ npm run build
 
 <br/>
 
-- This project was developed by for practice only, the name purezza and pictures belong to the company [purezza](https://purezza.co.uk/) in the UK.
-- This project was developed by Marcela Felix Fortis mentored by [Eduardo Alvarez](https://github.com/elalienx) with support from [Novare Potential](https://www.novarepotential.com/).
-- Exo 2,Oleo Script and Roboto Mono fonts are by from Google Fonts.
+- This project was developed by Marcela Felix Fortis mentored by [Eduardo Alvarez](https://github.com/elalienx) with
+  support from [Novare Potential](https://www.novarepotential.com/).
+- Fonts are by from Google Fonts.
 - Icons by FontAwesome [(Creative Commons Attribution 4.0 International license)](https://fontawesome.com/license).
 - Images from Unsplash.
-- The project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). For more information on how to perform common tasks, visit [this page](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+- Vectors by //todo (add attribution here)
+- The project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). For more
+  information on how to perform common tasks,
+  visit [this page](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)
+  .
