@@ -4,7 +4,7 @@ export default function Map({ latitude, longitude }) {
   const onInitHandler = (map) => {};
   const { ref } = useMapBox({
     center: [longitude, latitude],
-    zoom: [17],
+    zoom: [15],
     onInit: onInitHandler,
   });
   return (
