@@ -1,17 +1,16 @@
 import Hero from "./Hero";
-import FetchData from "../../utilities/FetchData";
-import PackageCard from "./PackageCard";
+import PackageCard from "../../components/PackageCard";
 import { useState } from "react";
 
-export default function Home() {
+export default function Home({ data }) {
   const [view, setView] = useState(false);
-  const Cards = FetchData().map((item) => {
+  const Cards = data.map((item) => {
     return <PackageCard parcel={item} key={item.id} />;
   });
   return (
     <section id="home">
       <Hero onClick={() => setView(true)} />
-      {view && <ul>{Cards}</ul>}
+      <ul>{Cards}</ul>
     </section>
   );
 }

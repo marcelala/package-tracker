@@ -3,3 +3,9 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+/modules.xml
+/package-tracker.iml
+/prettier.xml
+/inspectionProfiles/Project_Default.xml
+/vcs.xml
+/watcherTasks.xml
