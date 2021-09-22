@@ -31,7 +31,6 @@ export default function PackageDetails({ parcel }) {
         }
       />
       <Data label={getLabel("notes")} text={notes ? notes : getText("notes")} />
-      <span>Placeholder for map</span>
     </div>
   );
 }
