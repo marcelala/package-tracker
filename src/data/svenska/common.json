@@ -24,7 +24,10 @@
     },
     "descriptions": {
       "eta": "Information inte tillgänglig",
-      "verification": "Nödvändig"
+      "verification": "Nödvändig",
+      "verification_false": "Krävs inte",
+      "notes": "Inga anteckningar",
+      "unavailable": "Information inte tillgänglig"
     },
     "button-label": "Tillbaka"
   },

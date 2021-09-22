@@ -18,13 +18,16 @@
     "labels": {
       "location": "Pick up location",
       "eta": "Estimated delivery",
-      "last_update": "Last updated",
-      "note": "Notes",
+      "last_updated": "Last updated",
+      "notes": "Notes",
       "verification": "ID verification"
     },
     "descriptions": {
       "eta": "Information unavailable",
-      "verification": "Required"
+      "verification": "Required",
+      "verification_false": "Not Required",
+      "notes": "None",
+      "unavailable": "Information unavailable"
     },
     "button-label": "Go back"
   },
