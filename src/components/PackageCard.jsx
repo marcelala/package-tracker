@@ -7,21 +7,19 @@ export default function PackageCard({ item }) {
   const { t } = useTranslation("common");
   //constants
   const { parcel_id, sender, status } = item;
-  const icon = require(`../assets/icons/${item.status}.svg`);
+  const icon = require(`../assets/images/icons/${item.status}.svg`);
   const iconSrc = icon.default;
   const textStatus = t(`list.item.status.${item.status}`);
   return (
     <Link to={`/details/${parcel_id}`} className="package-card">
       <div className="card-content">
-        <div className="image-container">
-          <img
-            src={parcel}
-            alt="White cardboard box sealed with yellow tape on top"
-          />
-        </div>
+        <img
+          src={parcel}
+          alt="White cardboard box sealed with yellow tape on top"
+        />
         <div className="text-box">
           <h2> {sender}</h2>
-          <p># {parcel_id}</p>
+          <p>#{parcel_id}</p>
         </div>
         <div className="status-icon">
           <img src={iconSrc} alt="graphic representation of the status below" />

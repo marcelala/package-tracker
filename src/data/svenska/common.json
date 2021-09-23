@@ -1,4 +1,9 @@
 {
+  "home": {
+    "title": "Spåra dina paket var som helst",
+    "description": "Kontrollera alla dina leveranser",
+    "track": "Spåra nu"
+  },
   "list": {
     "title": "Hej",
     "description": "Dina paket",

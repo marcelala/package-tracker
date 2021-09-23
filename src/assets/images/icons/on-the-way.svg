@@ -3,8 +3,8 @@
 <circle cx="32" cy="30" r="22" fill="#F8AE3A"/>
 </g>
 <rect x="23" y="22" width="13.6364" height="11.8182" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M36.6364 26.5454H40.2727L43 29.2727V33.8182H36.6364V26.5454V26.5454Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="27.0909" cy="36.0909" r="2.27273" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M36.6364 26.5455H40.2727L43 29.2727V33.8182H36.6364V26.5455V26.5455Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="27.091" cy="36.0909" r="2.27273" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="38.9091" cy="36.0909" r="2.27273" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 <defs>
 <filter id="filter0_d" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
