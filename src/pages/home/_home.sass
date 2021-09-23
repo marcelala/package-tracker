@@ -1,7 +1,6 @@
 #home
 
   #hero
-    height: 98vh
     display: flex
     flex-direction: column
     justify-content: flex-end
@@ -34,4 +33,5 @@
       display: grid
       row-gap: $space-medium
       padding: $space-medium 0
-
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+      column-gap: $space-medium

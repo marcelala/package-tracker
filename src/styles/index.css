@@ -137,6 +137,7 @@ nav {
   width: 100vw;
   position: fixed;
   margin-bottom: 1.5rem;
+  z-index: 9999;
 }
 
 .nav-bar {
@@ -144,7 +145,6 @@ nav {
   width: 100%;
   height: 3.25rem;
   overflow: hidden;
-  z-index: 9999;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -203,17 +203,25 @@ footer p {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 3.5rem max-content 4rem;
+  grid-template-columns: 25% 40% 25%;
   align-items: center;
-  justify-content: space-around;
+  column-gap: 0.5rem;
+  overflow: hidden;
+  padding: 0.5rem;
+  justify-content: center;
 }
-.card-content img {
-  height: 3.5rem;
-  width: 3.5rem;
+.card-content .image-container {
+  width: 100%;
+  height: auto;
+}
+.card-content .image-container img {
+  height: 3.6rem;
+  width: 3.6rem;
   border-radius: 1rem;
 }
 .card-content .text-box {
   padding: 0.5rem;
+  margin: auto;
 }
 .card-content .text-box h2 {
   font-family: "Alegreya Sans SC", sans-serif;
@@ -222,15 +230,31 @@ footer p {
 .card-content .text-box p {
   color: #B2B5B5;
 }
-.card-content .text-box .status-icon {
+.card-content .status-icon {
   width: 4rem;
   height: 4rem;
-  font-family: #B2B5B5;
-  font-size: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  align-items: center;
+  justify-self: end;
+}
+.card-content .status-icon img {
+  border-radius: 0;
+  width: 2.3rem;
+  height: 2.3rem;
+}
+.card-content .status-icon small {
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #B2B5B5;
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 0.7rem;
 }
 
 #home #hero {
-  height: 98vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -263,6 +287,8 @@ footer p {
   display: grid;
   row-gap: 1.5rem;
   padding: 1.5rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 1.5rem;
 }
 
 .sidebar {
