@@ -1,0 +1,17 @@
+.loading
+  position: absolute
+  display: block
+  left: 50%
+  margin: 0 auto
+  text-align: center
+
+  .spinner
+    border: 0.2em solid rgba(0, 0, 0, 0.1)
+    border-top: 0.2em solid #767676
+    border-radius: 50%
+    width: 3rem
+    height: 3rem
+    @include spin
+
+  small
+    color: $primary

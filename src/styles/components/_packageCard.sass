@@ -1,60 +1,61 @@
-.package-card
-  width: 18rem
-  height: 5.3rem
-  border-radius: 1rem
-  background-color: $white
-  margin: auto
-  display: inline-block
-  padding: $space-x-small
-
-.card-content
-  width: 100%
-  height: 100%
-  display: grid
-  grid-template-columns: 22% 45% 27%
-  align-items: center
-  align-content: center
-  column-gap: $space-x-small
-  overflow: hidden
-  justify-items: center
-
-  img
+#list, #details
+  .package-card
+    width: 18rem
+    height: 5.3rem
     border-radius: 1rem
+    background-color: $white
+    margin: auto
+    display: inline-block
+    padding: $space-x-small
 
-  .text-box
+  .card-content
     width: 100%
     height: 100%
-    display: flex
-    flex-direction: column
+    display: grid
+    grid-template-columns: 22% 45% 27%
     align-items: center
-    justify-content: center
-    text-align: center
-
-    h2
-      font-family: $font-secondary
-      font-weight: 700
-
-    p
-      color: $secondary
-
-  .status-icon
-    width: 100%
-    height: 100%
-    display: flex
-    flex-direction: column
+    align-content: center
+    column-gap: $space-x-small
     overflow: hidden
-    align-items: center
-    justify-content: center
-    padding: 0
+    justify-items: center
 
     img
-      border-radius: 0
-      width: 2.8rem
-      height: 2.8rem
+      border-radius: 1rem
+
+    .text-box
+      width: 100%
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      text-align: center
+
+      h2
+        font-family: $font-secondary
+        font-weight: 700
+
+      p
+        color: $secondary
+
+    .status-icon
+      width: 100%
+      height: 100%
+      display: flex
+      flex-direction: column
+      overflow: hidden
+      align-items: center
+      justify-content: center
+      padding: 0
+
+      img
+        border-radius: 0
+        width: 2.8rem
+        height: 2.8rem
 
     small
-      font-family: $font-secondary
-      color: $secondary
-      font-size: 0.8rem
-      text-align: center
-      line-height: 0.8rem
+        font-family: $font-secondary
+        color: $secondary
+        font-size: 0.8rem
+        text-align: center
+        line-height: 0.8rem

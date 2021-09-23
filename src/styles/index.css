@@ -1,4 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100;300;400;500;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -85,6 +117,40 @@ h3 {
 p {
   font-size: 1rem;
   line-height: 1.375rem;
+}
+
+.loading {
+  position: absolute;
+  display: block;
+  left: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.loading .spinner {
+  border: 0.2em solid rgba(0, 0, 0, 0.1);
+  border-top: 0.2em solid #767676;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: spin;
+  -moz-animation-name: spin;
+  -o-animation-name: spin;
+  animation-name: spin;
+  -webkit-animation-direction: linear;
+  -moz-animation-direction: linear;
+  -o-animation-direction: linear;
+  animation-direction: linear;
+}
+.loading small {
+  color: #F8AE3A;
 }
 
 .btn {
@@ -189,7 +255,7 @@ footer p {
   padding: 0.8rem;
 }
 
-.package-card {
+#list .package-card, #details .package-card {
   width: 18rem;
   height: 5.3rem;
   border-radius: 1rem;
@@ -198,8 +264,7 @@ footer p {
   display: inline-block;
   padding: 0.5rem;
 }
-
-.card-content {
+#list .card-content, #details .card-content {
   width: 100%;
   height: 100%;
   display: grid;
@@ -210,10 +275,10 @@ footer p {
   overflow: hidden;
   justify-items: center;
 }
-.card-content img {
+#list .card-content img, #details .card-content img {
   border-radius: 1rem;
 }
-.card-content .text-box {
+#list .card-content .text-box, #details .card-content .text-box {
   width: 100%;
   height: 100%;
   display: flex;
@@ -222,14 +287,14 @@ footer p {
   justify-content: center;
   text-align: center;
 }
-.card-content .text-box h2 {
+#list .card-content .text-box h2, #details .card-content .text-box h2 {
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 700;
 }
-.card-content .text-box p {
+#list .card-content .text-box p, #details .card-content .text-box p {
   color: #B2B5B5;
 }
-.card-content .status-icon {
+#list .card-content .status-icon, #details .card-content .status-icon {
   width: 100%;
   height: 100%;
   display: flex;
@@ -239,12 +304,12 @@ footer p {
   justify-content: center;
   padding: 0;
 }
-.card-content .status-icon img {
+#list .card-content .status-icon img, #details .card-content .status-icon img {
   border-radius: 0;
   width: 2.8rem;
   height: 2.8rem;
 }
-.card-content .status-icon small {
+#list .card-content small, #details .card-content small {
   font-family: "Alegreya Sans SC", sans-serif;
   color: #B2B5B5;
   font-size: 0.8rem;
@@ -252,7 +317,7 @@ footer p {
   line-height: 0.8rem;
 }
 
-#home #hero {
+#hero {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -260,27 +325,29 @@ footer p {
   text-align: center;
   padding: 0 2rem;
 }
-#home #hero h1 {
+#hero h1 {
   margin: 0 auto;
   font-weight: bold;
   font-family: "Alegreya Sans SC", sans-serif;
   font-size: 4rem;
 }
-#home #hero img {
+#hero img {
   margin: 1.5rem auto;
 }
-#home #hero p {
+#hero p {
   color: #B2B5B5;
   padding: 1rem;
 }
-#home #hero button {
+#hero button {
   margin: 1rem auto;
 }
-#home #list {
+
+#list {
   background-color: #F3F3F3;
   margin: 1.5rem auto;
+  padding: 0 2rem;
 }
-#home #list ul {
+#list ul {
   margin: 1.5rem auto;
   width: 100%;
   display: grid;
@@ -290,6 +357,14 @@ footer p {
   column-gap: 1.5rem;
 }
 
+#details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+  text-align: center;
+  padding: 0 2rem;
+}
 .sidebar {
   background-color: rgba(35, 55, 75, 0.9);
   color: #fff;

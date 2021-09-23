@@ -1,7 +1,8 @@
+import { useTranslation } from "react-i18next";
 import Hero from "./Hero";
 import PackageCard from "../../components/PackageCard";
+import Spinner from "../../components/Spinner";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 
 export default function Home({ data }) {
   const { t } = useTranslation("common");
@@ -12,6 +13,8 @@ export default function Home({ data }) {
   return (
     <section id="home">
       <Hero onClick={() => setView(true)} />
+
+      <div className="spinner-container"> {!data && <Spinner />}</div>
 
       {view && (
         <section id="list">
