@@ -39,7 +39,6 @@ body {
   padding: 0;
   margin: 0;
   color: #B2B5B5;
-  height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -48,14 +47,16 @@ body {
   scroll-behavior: smooth;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   font-family: "Poppins", sans-serif;
+  background-color: #F3F3F3;
 }
 
 section {
   width: 100vw;
   padding: 0;
   margin: 0;
+  background-color: #FFFFFF;
 }
 
 article,
@@ -119,19 +120,31 @@ p {
   line-height: 1.375rem;
 }
 
-.loading {
-  position: absolute;
-  display: block;
-  left: 50%;
-  margin: 0 auto;
-  text-align: center;
+.error {
+  height: 500px;
+  width: 100%;
+  color: #F8AE3A;
 }
-.loading .spinner {
-  border: 0.2em solid rgba(0, 0, 0, 0.1);
-  border-top: 0.2em solid #767676;
+
+#loading {
+  padding: 2rem;
+}
+
+.spinner-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin: 2rem auto;
+  text-align: center;
+  flex-direction: column;
+}
+.spinner-container .spinner {
+  border: 0.4rem solid rgba(0, 0, 0, 0.1);
+  border-top: 0.4rem solid #767676;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  width: 8rem;
+  height: 8rem;
   -webkit-animation-duration: 0.6s;
   -moz-animation-duration: 0.6s;
   -o-animation-duration: 0.6s;
@@ -149,8 +162,11 @@ p {
   -o-animation-direction: linear;
   animation-direction: linear;
 }
-.loading small {
+.spinner-container h3 {
   color: #F8AE3A;
+  font: "Alegreya Sans SC", sans-serif;
+  text-align: center;
+  font-weight: 400;
 }
 
 .btn {
@@ -203,10 +219,9 @@ p {
 }
 
 nav {
-  width: 100vw;
-  position: fixed;
-  margin-bottom: 1.5rem;
+  width: 100%;
   z-index: 9999;
+  margin: 0 auto;
 }
 
 .nav-bar {
@@ -258,10 +273,6 @@ footer p {
   padding: 0.8rem;
 }
 
-.switch-hero {
-  display: none;
-}
-
 #hero {
   display: flex;
   flex-direction: column;
@@ -269,6 +280,8 @@ footer p {
   align-content: flex-end;
   text-align: center;
   padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 #hero h1 {
   margin: 0 auto;
@@ -305,7 +318,6 @@ footer p {
   align-content: center;
   column-gap: 0.5rem;
   overflow: hidden;
-  justify-items: center;
 }
 #home .card-content img, #details .card-content img {
   border-radius: 1rem;
@@ -355,27 +367,57 @@ footer p {
 }
 
 #home {
+  margin: 0 auto;
+  background-color: #F3F3F3;
+}
+#home .brand {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding: 2rem;
+  background-color: #FFFFFF;
+  max-width: 900px;
+  margin: auto;
+}
+#home .brand h1 {
+  margin: auto 0;
+  font-weight: bold;
+  font-family: "Alegreya Sans SC", sans-serif;
+  padding: 0;
+  color: #B2B5B5;
+}
+#home .brand img {
+  margin: auto 0;
+  height: 7rem;
+}
+
+#list {
   background-color: #F3F3F3;
   padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
-#home .list-title {
+#list .list-title {
   color: #F8AE3A;
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 500;
 }
-#home ul {
-  margin: 1.5rem auto;
+#list ul {
+  margin: 0 auto;
   width: 100%;
   display: grid;
   row-gap: 1.5rem;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   column-gap: 1.5rem;
 }
 
 #details {
-  padding: 2rem;
+  padding: 6rem 2rem 4rem;
   background-color: #F3F3F3;
+  margin: 0 auto;
 }
 #details .details-container {
   display: flex;
@@ -388,19 +430,40 @@ footer p {
   border-radius: 1rem;
   margin: auto;
   padding: 1rem;
+  max-width: 900px;
 }
 #details .details-container .package-card {
-  padding: 1rem 0;
+  padding: 0;
   width: 100%;
   height: auto;
-}
-#details .btn-ghost {
-  margin: 0 auto;
+  max-width: 800px;
 }
 #details .package {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  padding: 1.5rem 0;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+  width: 100%;
+  padding: 0;
+  justify-content: space-evenly;
+  grid-template-columns: auto auto;
+  margin: 0;
+}
+#details .package .notes {
+  grid-column: span 2;
+}
+#details .package .data {
+  display: block;
+  text-align: start;
+}
+#details .package small {
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+}
+#details .package p {
+  font-size: 0.9rem;
+}
+#details .btn-ghost {
+  margin: 0 auto;
 }
 
 .map-container {
@@ -408,6 +471,7 @@ footer p {
   font-size: 0.8rem;
   font-family: "Poppins", sans-serif;
   margin: 1.5rem auto;
+  max-width: 800px;
 }
 
 /*# sourceMappingURL=index.css.map */

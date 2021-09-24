@@ -7,8 +7,8 @@ export default function LoadingError() {
 
   return (
     <div className="error">
-      <p className="description-small">{t("common:no_internet_1")}</p>
-      <p className="description-small">{t("common:no_internet_2")}</p>
+      <p>{t("common:no_internet_1")}</p>
+      <p>{t("common:no_internet_2")}</p>
     </div>
   );
 }

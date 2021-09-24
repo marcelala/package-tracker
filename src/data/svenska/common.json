@@ -39,6 +39,6 @@
   "common": {
     "loading": "Läser in dina paket",
     "no_internet_1": "Oj, Vi kunde inte ladda dina paket.",
-    "no_internet_2": "Kontrollera din internetanslutning och försök igen."
+    "no_internet_2": "Kontrollera din internet anslutning och försök igen."
   }
 }

@@ -1,6 +1,7 @@
 #details
-  padding: $space-large
+  padding: 6rem $space-large 4rem
   background-color: $light
+  margin: 0 auto
 
   .details-container
     display: flex
@@ -13,26 +14,47 @@
     border-radius: 1rem
     margin: auto
     padding: $space-small
+    max-width: 900px
 
     .package-card
-      padding: $space-small 0
+      padding: 0
       width: 100%
       height: auto
-
-  .btn-ghost
-    margin: 0 auto
-
+      max-width: 800px
 
   .package
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))
-    padding: $space-medium 0
+    row-gap: $space-x-small
+    column-gap: $space-x-small
+    width: 100%
+    padding: 0
+    justify-content: space-evenly
+    grid-template-columns: auto auto
+    margin: 0
+
+    .notes
+      grid-column: span 2
+
+    .data
+      display: block
+      text-align: start
+
+    small
+      font-size: .7rem
+      line-height: .9rem
+
+    p
+      font-size: .9rem
+
+  .btn-ghost
+    margin: 0 auto
 
 .map-container
   color: $primary
   font-size: .8rem
   font-family: $font
   margin: $space-medium auto
+  max-width: 800px
 
 
 
