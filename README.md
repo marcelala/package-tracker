@@ -8,8 +8,10 @@
 ## Overview
 
 Welcome to Busy Bees 2.0, an assignment from Novare Potencial Academy. The goal of this project was to fetch data from a
-RESTful API and display the user's packages on a simple web application. Additionaly a map will display the pick-up
-location of each package (in progress). Click [here]() to visit.
+RESTful API and display the user's packages on a simple web application. Additionally, a map displays the pick-up
+location and its coordinates for each package. This application supports english and swedish languages.
+Click [here](https://busy-bees-tracking.web.app/)
+to visit.
 
 <br/>
 
@@ -125,6 +127,8 @@ npm run build
 - [Mapbox](https://www.mapbox.com/maps/) for maps.
 - [Moment.js](https://momentjs.com/) for formatting dates and times.
 - [i18next](https://www.i18next.com/) for internationalization.
+- [Worker-loader](https://www.npmjs.com/package/worker-loader) enables the transpilation of mapbox in react
+  applications.
 
 <br/>
 
@@ -146,7 +150,7 @@ npm run build
 - Fonts are by from Google Fonts.
 - Icons by FontAwesome [(Creative Commons Attribution 4.0 International license)](https://fontawesome.com/license).
 - Images from Unsplash.
-- Vectors by //todo (add attribution here)
+- Vectors by [PNGWING](https://www.pngwing.com/en/free-png-zbytj).
 - The project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). For more
   information on how to perform common tasks,
   visit [this page](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)
