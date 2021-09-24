@@ -34,6 +34,15 @@
       .status-icon
         height: 100%
 
+        small
+
+        @include respond(tablet)
+          font-size: 1.3rem
+
+      h2
+        @include respond(tablet)
+        font-size: 1.75rem
+
   .package
     display: grid
     row-gap: $space-x-small
@@ -52,12 +61,17 @@
       display: block
       text-align: start
 
+
     small
       font-size: .7rem
       line-height: .9rem
+      @include respond(tablet)
+        font-size: 1rem
 
     p
       font-size: .9rem
+      @include respond(tablet)
+        font-size: 1.2rem
 
   .btn-ghost
     margin: 0 auto
