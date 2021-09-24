@@ -1,9 +1,11 @@
 import useMapBox from "../../utilities/MapBox";
 
 export default function Map({ latitude, longitude }) {
+  const onInitHandler = () => {};
   const { ref } = useMapBox({
     center: [longitude, latitude],
     zoom: [15],
+    onInit: onInitHandler,
   });
   return (
     <div
