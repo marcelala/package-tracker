@@ -274,26 +274,27 @@ hr {
 
 footer {
   background-color: #1C1C1C;
-  height: 7rem;
+  height: 9rem;
   width: 100%;
-  display: flex;
+}
+footer .content {
+  height: 100%;
+  width: 100%;
   align-items: center;
-  justify-items: center;
-  flex-direction: column;
-  margin: auto;
-  justify-content: center;
-  padding: 1.5rem;
 }
-footer ul {
-  display: flex;
-  justify-content: center;
-}
-footer ul li {
-  padding: 0.5rem;
-}
-footer p {
+footer .content p {
   color: #FFEDAF;
   padding: 0.8rem;
+  text-align: center;
+}
+footer .content ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+}
+footer .content ul li {
+  padding: 0.5rem 1rem;
 }
 
 #hero {
@@ -385,7 +386,10 @@ footer p {
 
 #home {
   margin: 0 auto;
-  background-color: #1C1C1C;
+  background-color: #F3F3F3;
+}
+#home .brand {
+  max-width: 100%;
 }
 
 #list {

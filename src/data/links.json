@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "icon": "envelope.svg",
+    "link": "https://github.com/marcelala"
+  },
+  {
+    "id": 2,
+    "icon": "phone.svg",
+    "link": "https://www.linkedin.com/in/marcela-fortis"
+  },
+  {
+    "id": 3,
+    "icon": "map-marker.svg",
+    "link": "https://www.mapbox.com/maps/"
+  }
+]
