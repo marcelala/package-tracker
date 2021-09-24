@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+//project files
 import backup from "../data/backup.json";
 
 export default function FetchData() {
@@ -8,7 +9,7 @@ export default function FetchData() {
 
   // Constants
   const DEBUG_MODE = true;
-  const API_URL = "https://my.api.mockaroo.com/orders.json?key=e49e6840";
+  const API_URL = "https://my.api.mockaroo.com/insta-orders.json?key=e49e6840";
 
   // Methods
   useEffect(() => {
