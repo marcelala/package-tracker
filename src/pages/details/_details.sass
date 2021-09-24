@@ -1,7 +1,10 @@
 #details
-  padding: 6rem $space-large 4rem
   background-color: $light
   margin: 0 auto
+  padding: $space-large
+
+  .brand
+    width: 100%
 
   .details-container
     display: flex
@@ -17,10 +20,19 @@
     max-width: 900px
 
     .package-card
-      padding: 0
+      padding: 0 0 $space-medium
       width: 100%
       height: auto
-      max-width: 800px
+      align-items: center
+      justify-content: space-around
+      justify-items: stretch
+
+      img
+        max-height: 80px
+        justify-self: center
+
+      .status-icon
+        height: 100%
 
   .package
     display: grid
@@ -28,7 +40,8 @@
     column-gap: $space-x-small
     width: 100%
     padding: 0
-    justify-content: space-evenly
+    justify-content: space-around
+    justify-items: stretch
     grid-template-columns: auto auto
     margin: 0
 

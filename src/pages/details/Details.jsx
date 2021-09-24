@@ -7,6 +7,7 @@ import Button from "../../components/Button";
 import PackageCard from "../../components/PackageCard";
 import Map from "./Map";
 import arrow from "../../assets/images/icons/arrow-left.svg";
+import Brand from "../../components/Brand";
 
 export default function Details({ data }) {
   //global state
@@ -19,16 +20,19 @@ export default function Details({ data }) {
   const latitude = location_coordinate_latitude;
   const longitude = location_coordinate_longitude;
   return (
-    <section id="details">
-      <div className="details-container">
-        <PackageCard item={item} />
-        <PackageDetails parcel={item} />
-        <Map latitude={latitude} longitude={longitude} />
-        <Button onClick={() => history.goBack()} theme={"ghost"}>
-          <img src={arrow} alt="arrow pointing left" />{" "}
-          {t(`details.button-label`)}
-        </Button>
-      </div>
+    <section id="details-page">
+      <Brand />
+      <section id="details">
+        <div className="details-container">
+          <PackageCard item={item} />
+          <PackageDetails parcel={item} />
+          <Map latitude={latitude} longitude={longitude} />
+          <Button onClick={() => history.goBack()} theme={"ghost"}>
+            <img src={arrow} alt="arrow pointing left" />{" "}
+            {t(`details.button-label`)}
+          </Button>
+        </div>
+      </section>
     </section>
   );
 }

@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
-import Hero from "../../components/Hero";
 import PackageCard from "../../components/PackageCard";
-import HeroImg from "../../assets/images/HeroImg.png";
+import Brand from "../../components/Brand";
 
 export default function Home({ data }) {
   const { t } = useTranslation("common");
@@ -11,10 +10,7 @@ export default function Home({ data }) {
   const user = data[1].user_name;
   return (
     <section id="home">
-      <div className="brand">
-        <h1 className=" brand">Busy Bees</h1>
-        <img src={HeroImg} alt=" bees carrying cardboard boxes" />
-      </div>
+      <Brand />
       <section id="list">
         <p>
           {t(`list.title`)}, {user}!
