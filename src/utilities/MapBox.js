@@ -17,6 +17,14 @@ export default function useMapBox({ center, zoom = 13, onInit }) {
         center,
         zoom,
       });
+      map.addControl(new mapboxgl.NavigationControl());
+      const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+        `Coordinates: ${center}`
+      );
+      const marker = new mapboxgl.Marker({ color: "#F8AE3A" })
+        .setLngLat(center)
+        .setPopup(popup)
+        .addTo(map);
       setMap(map);
       onInit(map);
     }
