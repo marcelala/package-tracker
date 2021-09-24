@@ -1,6 +1,7 @@
 // NPM Packages
 import { useTranslation } from "react-i18next";
-import Hero from "./Hero";
+//project files
+import Hero from "../pages/landing/Hero";
 
 export default function Spinner() {
   const { t } = useTranslation("common");

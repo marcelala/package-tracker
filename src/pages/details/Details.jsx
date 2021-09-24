@@ -10,15 +10,12 @@ import arrow from "../../assets/images/icons/arrow-left.svg";
 import Brand from "../../components/Brand";
 
 export default function Details({ data }) {
-  //global state
   const { t } = useTranslation("common");
   const { parcel_id } = useParams();
   const history = useHistory();
   //constants
   const item = data.find((item) => item.parcel_id === parcel_id);
   const { location_coordinate_latitude, location_coordinate_longitude } = item;
-  const latitude = location_coordinate_latitude;
-  const longitude = location_coordinate_longitude;
   return (
     <section id="details-page">
       <Brand />
@@ -26,7 +23,10 @@ export default function Details({ data }) {
         <div className="details-container">
           <PackageCard item={item} />
           <PackageDetails parcel={item} />
-          <Map latitude={latitude} longitude={longitude} />
+          <Map
+            latitude={location_coordinate_latitude}
+            longitude={location_coordinate_longitude}
+          />
           <Button onClick={() => history.goBack()} theme={"ghost"}>
             <img src={arrow} alt="arrow pointing left" />{" "}
             {t(`details.button-label`)}

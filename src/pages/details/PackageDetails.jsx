@@ -1,12 +1,12 @@
 //npm packages
 import { useTranslation } from "react-i18next";
 //project files
-import Data from "../../components/Data";
+import Data from "./Data";
 import UseMoment from "../../utilities/useMoment";
 
 export default function PackageDetails({ parcel }) {
-  //global state
   const { t } = useTranslation("common");
+  //constants
   const { eta, last_updated, location_name, notes, verification_required } =
     parcel;
 

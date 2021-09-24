@@ -1,6 +1,8 @@
+//npm packages
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+//project files
 import logo from "../assets/images/logo.png";
 import Button from "./Button";
 

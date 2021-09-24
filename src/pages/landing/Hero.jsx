@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 //project files
-import HeroImg from "../assets/images/HeroImg.png";
-import Button from "./Button";
+import HeroImg from "../../assets/images/HeroImg.png";
+import Button from "../../components/Button";
 
 export default function Hero() {
   const { t } = useTranslation("common");

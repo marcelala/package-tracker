@@ -14,11 +14,11 @@ export default function FetchData() {
   useEffect(() => {
     fetch(API_URL, { mode: "cors" })
       .then((response) => response.json())
-      .then((json) => onSucess(json))
+      .then((json) => onSuccess(json))
       .catch((error) => onFail(error));
   }, [setStatus, setData]);
 
-  function onSucess(json) {
+  function onSuccess(json) {
     setData(json);
     setStatus(1);
   }

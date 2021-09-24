@@ -1,5 +1,7 @@
+//npm packages
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+//project files
 import parcel from "../assets/images/package.svg";
 
 export default function PackageCard({ item }) {

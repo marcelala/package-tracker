@@ -1,11 +1,10 @@
-// NPM Packages
+// npm Packages
 import { Switch, Route } from "react-router-dom";
+//project files
 import Home from "../pages/home/Home";
 import Details from "../pages/details/Details";
-import Hero from "./Hero";
 import Landing from "../pages/landing/Landing";
 
-// Project files
 export default function MySwitch({ data }) {
   return (
     <Switch>

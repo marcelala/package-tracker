@@ -1,5 +1,7 @@
+//npm packages
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
+//project data
 import ScrollToTop from "./utilities/ScrollToTop";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
