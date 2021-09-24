@@ -23,8 +23,8 @@
     "labels": {
       "location": "Upphämtning stället",
       "eta": "Beräknad leverans",
-      "last_update": "Sist updaterad",
-      "note": "Anteckningar",
+      "last_updated": "Sist updaterad",
+      "notes": "Anteckningar",
       "verification": "ID kontroll"
     },
     "descriptions": {
