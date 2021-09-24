@@ -19,7 +19,7 @@ export default function useMapBox({ center, zoom = 13, onInit }) {
       });
       map.addControl(new mapboxgl.NavigationControl());
       const popup = new mapboxgl.Popup({ offset: 25 }).setText(
-        `Coordinates: ${center}`
+        `Pick up your package here! Coordinates(lng,lat): ${center}`
       );
       const marker = new mapboxgl.Marker({ color: "#F8AE3A" })
         .setLngLat(center)

@@ -8,15 +8,10 @@ export default function Map({ latitude, longitude }) {
     onInit: onInitHandler,
   });
   return (
-    <div>
-      <div className="sidebar">
-        Longitude: {longitude} | Latitude: {latitude}
-      </div>
-      <div
-        ref={ref}
-        className="map-container"
-        style={{ width: "100%", height: "500px" }}
-      />
-    </div>
+    <div
+      ref={ref}
+      className="map-container"
+      style={{ width: "100%", height: "500px" }}
+    />
   );
 }
