@@ -313,7 +313,7 @@ footer p {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 22% 45% 27%;
+  grid-template-columns: 20% auto 25%;
   align-items: center;
   align-content: center;
   column-gap: 0.5rem;
@@ -341,17 +341,16 @@ footer p {
 #home .card-content .status-icon, #details .card-content .status-icon {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   overflow: hidden;
   align-items: center;
-  justify-content: center;
-  padding: 0;
 }
 #home .card-content .status-icon img, #details .card-content .status-icon img {
   border-radius: 0;
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 65%;
+  padding: 0.3rem;
+  height: auto;
 }
 #home .card-content small, #details .card-content small {
   font-family: "Alegreya Sans SC", sans-serif;
