@@ -1,4 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100;300;400;500;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -6,9 +38,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
   color: #B2B5B5;
-  height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,13 +47,16 @@ body {
   scroll-behavior: smooth;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: #F3F3F3;
 }
 
 section {
-  width: 100%;
+  width: 100vw;
   padding: 0;
   margin: 0;
+  background-color: #FFFFFF;
 }
 
 article,
@@ -55,87 +88,102 @@ img {
   overflow: hidden;
 }
 
-.App {
-  font-family: "Poppins", sans-serif;
-}
-
 h1,
 h2,
 h3,
 h4,
 p {
-  margin-top: 0;
+  margin: 0;
+  color: #1C1C1C;
 }
 
-h1,
-.h1 {
+h1 {
   font-size: 2.2rem;
   line-height: 2.56rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 900;
 }
 
-h2,
-.h2 {
+h2 {
   font-weight: 500;
   font-size: 1.375rem;
   line-height: 1.75rem;
 }
 
-h3,
-.h3 {
+h3 {
   font-size: 1rem;
   line-height: 1.375rem;
 }
 
-p,
-.p {
+p {
   font-size: 1rem;
   line-height: 1.375rem;
 }
 
-h2 {
+.error {
+  height: 500px;
+  width: 100%;
   color: #F8AE3A;
 }
 
-h1 {
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-weight: 900;
+#loading {
+  padding: 2rem;
 }
 
-h3 {
-  padding-left: 1rem;
-  font-family: "Alegreya Sans SC", sans-serif;
+.spinner-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin: 2rem auto;
+  text-align: center;
+  flex-direction: column;
 }
-
-.App {
-  display: grid;
-  grid: auto-flow min-content/1fr;
-  grid-template-areas: "nav" "content" "footer";
+.spinner-container .spinner {
+  border: 0.4rem solid rgba(0, 0, 0, 0.1);
+  border-top: 0.4rem solid #767676;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: spin;
+  -moz-animation-name: spin;
+  -o-animation-name: spin;
+  animation-name: spin;
+  -webkit-animation-direction: linear;
+  -moz-animation-direction: linear;
+  -o-animation-direction: linear;
+  animation-direction: linear;
 }
-
-nav {
-  width: 100%;
-  grid-area: nav;
-}
-
-footer {
-  width: 100%;
-  grid-area: footer;
+.spinner-container h3 {
+  color: #F8AE3A;
+  font: "Alegreya Sans SC", sans-serif;
+  text-align: center;
+  font-weight: 400;
 }
 
 .btn {
+  cursor: pointer;
   font-size: 1rem;
-  position: relative;
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
   border: 0;
-  font-weight: 400;
-  justify-content: center;
-  align-items: center;
+  font-weight: 600;
+  text-align: center;
   color: white;
   text-transform: capitalize;
-  margin: 1rem;
+  padding: 1rem 1.5rem;
+  max-width: 9.5rem;
   transition: transform 250ms ease-in-out;
   position: relative;
-  border-radius: 2rem;
+  border-radius: 1.1rem;
 }
 .btn::after {
   content: "";
@@ -152,110 +200,290 @@ footer {
 .btn-primary {
   background-color: #F8AE3A;
   color: #FFFFFF;
-  padding: 1rem;
 }
-.btn-secondary {
+.btn-ghost {
   background-color: #FFFFFF;
-  color: #F8AE3A;
-  border: 0.5px solid #F8AE3A;
+  color: #1C1C1C;
   padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+}
+.btn-language {
+  background-color: transparent;
   font-size: 0.8rem;
+  border: 0.5px solid #FFFFFF;
+  padding: 0.25rem 0.5rem;
+}
+
+nav {
+  width: 100%;
+  z-index: 9999;
+  margin: 0 auto;
 }
 
 .nav-bar {
   background-color: #F8AE3A;
-  width: 100vw;
-  color: #FFFFFF;
-  font-weight: 400;
+  width: 100%;
   height: 3.25rem;
-  position: fixed;
   overflow: hidden;
-  z-index: 9999;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-@media only screen and (max-width: 37em) {
-  .nav-bar {
-    height: 2.5rem;
-  }
-}
-.nav-bar .logo {
-  height: 2.6rem;
+.nav-bar img {
+  padding: 0.5rem;
+  height: 90%;
   width: auto;
-  margin: 0 1rem;
+  margin: auto 1rem;
 }
-@media only screen and (max-width: 37em) {
-  .nav-bar .logo {
-    display: none;
-  }
+.nav-bar button {
+  margin: auto 1rem;
 }
-.nav-bar ul {
-  height: 100%;
-  width: 90%;
-  display: grid;
-  margin: 0rem;
-  column-gap: 0rem;
-  justify-items: end;
-  grid-column-gap: 2rem;
+
+hr {
+  margin: 0;
+  box-shadow: 0 0 5px 2px #FFEDAF;
+  border: none;
+}
+
+#home .brand, #details-page .brand {
+  display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   align-content: center;
-  align-items: center;
-  grid-template-columns: max-content repeat(5, 10%);
+  text-align: center;
+  padding: 2rem;
+  background-color: #FFFFFF;
+  max-width: 900px;
+  margin: auto;
 }
-@media only screen and (max-width: 37em) {
-  .nav-bar ul {
-    justify-content: space-around;
-  }
-}
-.nav-bar li {
-  font-size: 0.9rem;
-  justify-self: center;
-  color: #FFFFFF;
-  display: inline-block;
-}
-@media only screen and (max-width: 37em) {
-  .nav-bar li {
-    font-size: 0.7rem;
-  }
-}
-.nav-bar li:hover {
-  text-decoration: underline;
+#home .brand h1, #details-page .brand h1 {
+  margin: auto 0;
+  font-weight: bold;
+  font-family: "Alegreya Sans SC", sans-serif;
+  padding: 0;
   color: #B2B5B5;
 }
-
-.footer {
-  background-color: #B2B5B5;
+#home .brand img, #details-page .brand img {
+  margin: auto 0;
   height: 7rem;
+}
+
+footer {
+  background-color: #1C1C1C;
+  height: 9rem;
   width: 100%;
-  display: flex;
+}
+footer .content {
+  height: 100%;
+  width: 100%;
   align-items: center;
-  justify-items: center;
-  flex-direction: column;
-  margin: auto;
-  justify-content: center;
-  padding: 1.5rem;
 }
-.footer ul {
+footer .content p {
+  color: #FFEDAF;
+  padding: 0.8rem;
+  text-align: center;
+}
+footer .content ul {
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 1rem;
 }
-.footer ul li {
+footer .content ul li {
+  padding: 0.5rem 1rem;
+}
+
+#home .package-card, #details .package-card {
+  width: 18rem;
+  height: 5.3rem;
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+  margin: auto;
+  display: inline-block;
   padding: 0.5rem;
 }
-.footer p {
-  color: #FFFFFF;
-  padding: 0.8rem;
+#home .card-content, #details .card-content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20% auto 28%;
+  align-items: center;
+  align-content: center;
+  column-gap: 0.5rem;
+  overflow: hidden;
+}
+#home .card-content img, #details .card-content img {
+  border-radius: 1rem;
+}
+#home .card-content .text-box, #details .card-content .text-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#home .card-content .text-box h2, #details .card-content .text-box h2 {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 700;
+}
+#home .card-content .text-box p, #details .card-content .text-box p {
+  color: #B2B5B5;
+}
+#home .card-content .status-icon, #details .card-content .status-icon {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+}
+#home .card-content .status-icon img, #details .card-content .status-icon img {
+  border-radius: 0;
+  width: 55%;
+  padding: 0.3rem;
+  height: auto;
+}
+#home .card-content small, #details .card-content small {
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: #B2B5B5;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 0.8rem;
 }
 
-.sidebar {
-  background-color: rgba(35, 55, 75, 0.9);
-  color: #fff;
-  padding: 6px 12px;
-  font-family: monospace;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 12px;
-  border-radius: 4px;
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+  text-align: center;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+#hero h1 {
+  margin: 0 auto;
+  font-weight: bold;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 4rem;
+}
+#hero img {
+  margin: 1.5rem auto;
+}
+#hero p {
+  color: #B2B5B5;
+  padding: 1rem;
+}
+#hero .btn-primary {
+  margin: 1.5rem auto;
+}
+
+#home {
+  margin: 0 auto;
+  background-color: #F3F3F3;
+}
+#home .brand {
+  max-width: 100%;
+}
+
+#list {
+  background-color: #F3F3F3;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+#list .list-title {
+  color: #F8AE3A;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 500;
+}
+#list ul {
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  row-gap: 1.5rem;
+  padding: 2rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 1.5rem;
+}
+
+#details {
+  background-color: #F3F3F3;
+  margin: 0 auto;
+  padding: 2rem;
+}
+#details .brand {
+  width: 100%;
+}
+#details .details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+  text-align: center;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  margin: auto;
+  padding: 1rem;
+  max-width: 900px;
+}
+#details .details-container .package-card {
+  padding: 0 0 1.5rem;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: space-around;
+  justify-items: stretch;
+}
+#details .details-container .package-card img {
+  max-height: 80px;
+  justify-self: center;
+}
+#details .details-container .package-card .status-icon {
+  height: 100%;
+}
+#details .package {
+  display: grid;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+  width: 100%;
+  padding: 0;
+  justify-content: space-around;
+  justify-items: stretch;
+  grid-template-columns: auto auto;
+  margin: 0;
+}
+#details .package .notes {
+  grid-column: span 2;
+}
+#details .package .data {
+  display: block;
+  text-align: start;
+}
+#details .package small {
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+}
+#details .package p {
+  font-size: 0.9rem;
+}
+#details .btn-ghost {
+  margin: 0 auto;
+}
+
+.map-container {
+  color: #F8AE3A;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
+  margin: 1.5rem auto;
+  max-width: 800px;
 }
 
 /*# sourceMappingURL=index.css.map */

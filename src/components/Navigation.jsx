@@ -1,6 +1,8 @@
+//npm packages
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+//project files
 import logo from "../assets/images/logo.png";
 import Button from "./Button";
 
@@ -22,13 +24,15 @@ export default function Navigation() {
 
   return (
     <nav>
-      <Link to="/">
-        <img src={logo} alt="realistic bee" />
-        <h1>Busy Bees</h1>
-      </Link>
-      <Button theme={"language"} onClick={() => updateLanguage()}>
-        {language}
-      </Button>
+      <div className="nav-bar">
+        <Link to="/">
+          <img src={logo} alt="realistic bee" />
+          <h1>Busy Bees</h1>
+        </Link>
+        <Button theme={"language"} onClick={() => updateLanguage()}>
+          {language}
+        </Button>
+      </div>
       <hr />
     </nav>
   );

@@ -1,13 +1,16 @@
-import Data from "../../components/Data";
-import DateMoment from "../../utilities/DateMoment";
+//npm packages
 import { useTranslation } from "react-i18next";
+//project files
+import Data from "./Data";
+import UseMoment from "../../utilities/useMoment";
 
 export default function PackageDetails({ parcel }) {
-  //global state
   const { t } = useTranslation("common");
+  //constants
   const { eta, last_updated, location_name, notes, verification_required } =
     parcel;
 
+  //functions
   function getLabel(tag) {
     return t(`details.labels.${tag}`);
   }
@@ -19,8 +22,11 @@ export default function PackageDetails({ parcel }) {
 
   return (
     <div className="package">
-      <Data label={getLabel("eta")} text={DateMoment(eta) || getText("eta")} />
-      <Data label={getLabel("last_updated")} text={DateMoment(last_updated)} />
+      <Data
+        label={getLabel("eta")}
+        text={UseMoment(eta, true) || getText("eta")}
+      />
+      <Data label={getLabel("last_updated")} text={UseMoment(last_updated)} />
       <Data label={getLabel("location")} text={location_name} />
       <Data
         label={getLabel("verification")}
@@ -30,7 +36,12 @@ export default function PackageDetails({ parcel }) {
             : getText("verification_false")
         }
       />
-      <Data label={getLabel("notes")} text={notes ? notes : getText("notes")} />
+      <div className="notes">
+        <Data
+          label={getLabel("notes")}
+          text={notes ? notes : getText("notes")}
+        />
+      </div>
     </div>
   );
 }

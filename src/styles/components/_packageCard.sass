@@ -1,0 +1,60 @@
+#home, #details
+  .package-card
+    width: 18rem
+    height: 5.3rem
+    border-radius: 1rem
+    background-color: $white
+    margin: auto
+    display: inline-block
+    padding: $space-x-small
+
+  .card-content
+    width: 100%
+    height: 100%
+    display: grid
+    grid-template-columns: 20% auto 28%
+    align-items: center
+    align-content: center
+    column-gap: $space-x-small
+    overflow: hidden
+
+    img
+      border-radius: 1rem
+
+    .text-box
+      width: 100%
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      text-align: center
+
+      h2
+        font-family: $font-secondary
+        font-weight: 700
+
+      p
+        color: $secondary
+
+    .status-icon
+      width: 100%
+      height: 100%
+      display: inline-flex
+      flex-direction: column
+      overflow: hidden
+      align-items: center
+
+      img
+        border-radius: 0
+        width: 55%
+        padding: .3rem
+        height: auto
+
+
+    small
+      font-family: $font-secondary
+      color: $secondary
+      font-size: 0.8rem
+      text-align: center
+      line-height: 0.8rem

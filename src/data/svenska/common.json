@@ -1,4 +1,9 @@
 {
+  "home": {
+    "title": "Spåra dina paket var som helst",
+    "description": "Kontrollera alla dina leveranser",
+    "track": "Spåra nu"
+  },
   "list": {
     "title": "Hej",
     "description": "Dina paket",
@@ -18,8 +23,8 @@
     "labels": {
       "location": "Upphämtning stället",
       "eta": "Beräknad leverans",
-      "last_update": "Sist updaterad",
-      "note": "Anteckningar",
+      "last_updated": "Sist updaterad",
+      "notes": "Anteckningar",
       "verification": "ID kontroll"
     },
     "descriptions": {
@@ -34,6 +39,6 @@
   "common": {
     "loading": "Läser in dina paket",
     "no_internet_1": "Oj, Vi kunde inte ladda dina paket.",
-    "no_internet_2": "Kontrollera din internetanslutning och försök igen."
+    "no_internet_2": "Kontrollera din internet anslutning och försök igen."
   }
 }

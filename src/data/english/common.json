@@ -1,4 +1,9 @@
 {
+  "home": {
+    "title": "Track your parcels anywhere",
+    "description": "Check the progress of all of your deliveries",
+    "track": "Track now"
+  },
   "list": {
     "title": "Hello",
     "description": "Your packages",

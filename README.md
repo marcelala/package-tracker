@@ -43,7 +43,7 @@ Potential Academy.
 
 <br/>
 
-[Assignment]()
+[Assignment](https://docs.google.com/document/d/1u1OE_DjhYwKrULZW7N4PXOFDELVyTiu9caupUZfVc34/edit?usp=sharing)
 
 <br/>
 
@@ -117,12 +117,14 @@ npm run build
 
 - As a project generated with `create-react-app`, it includes React and ReactDOM as dependencies. It also includes a set
   of scripts used by Create React App as a development dependency.
-- The project setup also uses [Webpack](https://webpack.js.org/) for handling all assets, as Webpack offers a custom way
-  of “extending” the concept of `import` beyond JavaScript.
+- [Webpack](https://webpack.js.org/) for handling all assets, as Webpack offers a custom way of “extending” the concept
+  of `import` beyond JavaScript.
 - [React Router Dom](https://www.npmjs.com/package/react-router-dom) for routing Navigation.
-- [SASS](https://github.com/sass/sass) Sassy CSS for styling
+- [Node-SASS](https://github.com/sass/) Sassy CSS for styling
 - [Firebase](https://firebase.google.com/) for hosting the application.
-- [Mapbox](https://firebase.google.com/) for hosting the application.
+- [Mapbox](https://www.mapbox.com/maps/) for maps.
+- [Moment.js](https://momentjs.com/) for formatting dates and times.
+- [i18next](https://www.i18next.com/) for internationalization.
 
 <br/>
 
